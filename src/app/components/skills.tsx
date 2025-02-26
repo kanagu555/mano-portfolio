@@ -1,8 +1,8 @@
-import Box from "@mui/material/Box"
-import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
-import Grid from "@mui/material/Grid"
-import { useTheme } from "@mui/material/styles"
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import { useTheme } from "@mui/material/styles";
 import {
   Code,
   Speed,
@@ -13,14 +13,10 @@ import {
   GroupWork,
   Psychology,
   Terminal,
-  Api,
   DataObject,
   CloudSync,
   Assessment,
-  Build,
-  Devices,
-  Security,
-} from "@mui/icons-material"
+} from "@mui/icons-material";
 
 const skills = [
   {
@@ -32,11 +28,6 @@ const skills = [
     name: "Automation Testing",
     icon: AutoFixHigh,
     color: "#2196f3",
-  },
-  {
-    name: "API Testing",
-    icon: Api,
-    color: "#4caf50",
   },
   {
     name: "Performance Testing",
@@ -88,20 +79,10 @@ const skills = [
     icon: Assessment,
     color: "#009688",
   },
-  {
-    name: "Cross-platform Testing",
-    icon: Devices,
-    color: "#8bc34a",
-  },
-  {
-    name: "Security Testing",
-    icon: Security,
-    color: "#cddc39",
-  },
-]
+];
 
 export default function Skills() {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Box
@@ -128,7 +109,7 @@ export default function Skills() {
         </Typography>
         <Grid container spacing={4}>
           {skills.map((skill, index) => {
-            const IconComponent = skill.icon
+            const IconComponent = skill.icon;
             return (
               <Grid item xs={6} sm={4} md={3} key={index}>
                 <Box
@@ -167,11 +148,10 @@ export default function Skills() {
                   </Typography>
                 </Box>
               </Grid>
-            )
+            );
           })}
         </Grid>
       </Container>
     </Box>
-  )
+  );
 }
-

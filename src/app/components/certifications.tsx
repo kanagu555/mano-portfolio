@@ -11,7 +11,6 @@ import {
   VerifiedUser,
   School,
   Badge,
-  CloudDone,
   OpenInNew,
 } from "@mui/icons-material";
 
