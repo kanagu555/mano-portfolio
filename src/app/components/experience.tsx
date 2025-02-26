@@ -87,7 +87,7 @@ export default function Experience() {
         >
           Experience
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} justifyContent="center">
           {experiences.map((experience, index) => (
             <Grid item xs={12} md={6} lg={4} key={index}>
               <Card
