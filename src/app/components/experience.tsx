@@ -40,7 +40,7 @@ const experiences = [
   },
   {
     title: " Big Data Test Engineer",
-    company: "WiPro Technologies",
+    company: "Wipro Technologies",
     location: "Bangalore, India",
     period: "2013 - 2021",
     description:
