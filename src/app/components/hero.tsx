@@ -1,23 +1,29 @@
-"use client"
+"use client";
 
-import Box from "@mui/material/Box"
-import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
-import { useTheme } from "@mui/material/styles"
-import Avatar from "@mui/material/Avatar"
-import Stack from "@mui/material/Stack"
-import { GitHub, LinkedIn, Email, LocationOn, Download } from "@mui/icons-material"
-import IconButton from "@mui/material/IconButton"
-import Tooltip from "@mui/material/Tooltip"
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import {
+  GitHub,
+  LinkedIn,
+  Email,
+  LocationOn,
+  Download,
+} from "@mui/icons-material";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function Hero() {
-  const theme = useTheme()
+  const theme = useTheme();
 
   const handleDownloadResume = () => {
     // Replace with your actual resume file URL
-    const resumeUrl = "/ManoPrabha_K_Resume.pdf"
-    window.open(resumeUrl, "_blank")
-  }
+    const resumeUrl = "/ManoPrabha_K_Resume.pdf";
+    window.open(resumeUrl, "_blank");
+  };
 
   return (
     <Box
@@ -37,7 +43,8 @@ export default function Hero() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: "radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%)",
+          background:
+            "radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%)",
         },
       }}
     >
@@ -61,7 +68,7 @@ export default function Hero() {
           >
             <Avatar
               alt="ManoPrabha K"
-              src="/placeholder.svg"
+              src="https://i.postimg.cc/3JpthPp5/mano.jpg"
               sx={{
                 width: { xs: 200, md: 250 },
                 height: { xs: 200, md: 250 },
@@ -104,8 +111,8 @@ export default function Hero() {
               opacity: 0.9,
             }}
           >
-            Dedicated QA Engineer with expertise in manual and automated testing, ensuring software quality and
-            reliability.
+            Dedicated QA Engineer with expertise in manual and automated
+            testing, ensuring software quality and reliability.
           </Typography>
           <Stack direction="row" spacing={2} sx={{ mt: 4 }}>
             <Tooltip title="GitHub Profile">
@@ -125,6 +132,12 @@ export default function Hero() {
               <IconButton
                 color="primary"
                 size="large"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/manoprabha-k-7b3a4320a/",
+                    "_blank"
+                  )
+                }
                 sx={{
                   bgcolor: "background.paper",
                   "&:hover": { transform: "translateY(-3px)" },
@@ -152,6 +165,9 @@ export default function Hero() {
               <IconButton
                 color="primary"
                 size="large"
+                onClick={() =>
+                  window.open("mailto:inboxmano93@gmail.com", "_blank")
+                }
                 sx={{
                   bgcolor: "background.paper",
                   "&:hover": { transform: "translateY(-3px)" },
@@ -165,6 +181,7 @@ export default function Hero() {
               <IconButton
                 color="primary"
                 size="large"
+                // onClick={() => window.open("https://goo.gl/maps/2JQ3tRZq7E3k2ZzP7", "_blank")}
                 sx={{
                   bgcolor: "background.paper",
                   "&:hover": { transform: "translateY(-3px)" },
@@ -178,6 +195,5 @@ export default function Hero() {
         </Stack>
       </Container>
     </Box>
-  )
+  );
 }
-

@@ -1,10 +1,10 @@
-import Box from "@mui/material/Box"
-import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
-import { useTheme } from "@mui/material/styles"
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 
 export default function About() {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Box
@@ -40,15 +40,17 @@ export default function About() {
             color: theme.palette.mode === "dark" ? "#e3f2fd" : "#1a237e",
           }}
         >
-          As a dedicated Testing Professional with over 6 years of experience, I specialize in ensuring software quality
-          through comprehensive testing methodologies. My expertise spans across manual and automated testing, with a
-          strong focus on creating efficient test frameworks and implementing CI/CD pipelines. I am passionate about
-          delivering high-quality software products and continuously staying updated with the latest testing tools and
-          technologies. My approach combines analytical thinking with attention to detail, making me an effective team
-          leader and problem solver in the quality assurance domain.
+          As a dedicated Testing Professional with over 10+ years of experience,
+          I specialize in ensuring software quality through comprehensive
+          testing methodologies. My expertise spans across manual and automated
+          testing, with a strong focus on creating efficient test frameworks and
+          implementing CI/CD pipelines. I am passionate about delivering
+          high-quality software products and continuously staying updated with
+          the latest testing tools and technologies. My approach combines
+          analytical thinking with attention to detail, making me an effective
+          team leader and problem solver in the quality assurance domain.
         </Typography>
       </Container>
     </Box>
-  )
+  );
 }
-

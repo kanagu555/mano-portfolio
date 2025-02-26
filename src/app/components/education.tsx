@@ -9,16 +9,16 @@ import { School } from "@mui/icons-material"
 
 const education = [
   {
-    degree: "Bachelor of Technology in Computer Science",
-    school: "Technical University",
-    period: "2012 - 2016",
-    description: "Specialized in Software Engineering and Testing Methodologies",
+    degree: "Master's degree, Information Technology",
+    school: "Vellore Institute of Technology",
+    period: "2014 - 2017",
+    description: "Specialized in Software Engineering",
   },
   {
-    degree: "Higher Secondary Education",
-    school: "City Public School",
-    period: "2010 - 2012",
-    description: "Science Stream with Computer Science",
+    degree: "Bsc - CT",
+    school: "Sri Krishna Arts and Science College",
+    period: "2010 - 2013",
+    description: "Specialized Computer Technology/Computer Systems Technology",
   },
 ]
 

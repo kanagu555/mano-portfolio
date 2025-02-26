@@ -1,22 +1,29 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Box from "@mui/material/Box"
-import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
-import Grid from "@mui/material/Grid"
-import Card from "@mui/material/Card"
-import CardContent from "@mui/material/CardContent"
-import { useTheme } from "@mui/material/styles"
-import { Work, CalendarMonth, Business, Description, LocationOn, Close } from "@mui/icons-material"
-import Modal from "@mui/material/Modal"
-import IconButton from "@mui/material/IconButton"
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import { useTheme } from "@mui/material/styles";
+import {
+  Work,
+  CalendarMonth,
+  Business,
+  Description,
+  LocationOn,
+  Close,
+} from "@mui/icons-material";
+import Modal from "@mui/material/Modal";
+import IconButton from "@mui/material/IconButton";
 
 const experiences = [
   {
-    title: "Senior QA Engineer",
-    company: "Tech Solutions Inc.",
-    location: "San Francisco, CA",
+    title: "Lead data Engineer",
+    company: "Brillio",
+    location: "Bangalore, India",
     period: "2021 - Present",
     description:
       "Lead testing efforts for enterprise applications, managing a team of testers and implementing automated testing solutions.",
@@ -32,45 +39,30 @@ const experiences = [
     • Conducted regular team training sessions`,
   },
   {
-    title: "QA Engineer",
-    company: "Digital Innovations Ltd.",
-    location: "Austin, TX",
-    period: "2018 - 2021",
+    title: " Big Data Test Engineer",
+    company: "WiPro Technologies",
+    location: "Bangalore, India",
+    period: "2013 - 2021",
     description:
-      "Developed and executed test cases, performed regression testing, and collaborated with developers to resolve issues.",
-    detailedDescription: `• Created and maintained test plans and test cases
-    • Executed manual and automated tests
-    • Performed regression testing for each release
-    • Collaborated with developers for bug fixes
-    • Implemented mobile testing strategy
-    • Conducted security testing
-    • Managed test data and test environments
-    • Participated in Agile ceremonies
-    • Created test metrics and reports
-    • Improved test coverage by 25%`,
+      "The overall objective is to capture the change in data warehouse every day and only the latest record should be populated in Data Mart for analysis.",
+    detailedDescription: `• Attending data requirements meeting, analysed the business logic and rules for every use case.
+• Validating HDFS source files from SAP system and creating HQL queries for Small/Medium, Cluster and large table patterns.
+• Creating JSON files to implement the business transformations, generating the HQL queries and execute Python script to create Hive/Impala tables and views.
+• Validating the E2E file with ingested Hive/Impala table data based on full load and daily delta load.
+• Creating test cases, results and validation sheet, performed test result walk-through meeting with use case team for approval to production migration.
+• Creating workflows and scheduled jobs through Oozie.
+• Modified Python code templates for openhub template tables and created HQL queries for Hive table creation.
+• Ingesting data on Development, Build and Test regions with Jenkins job.
+• Created production deployment jobs in Jenkins and monitoring is done through Oozie scheduler.
+• Worked on analysis of critical data issue tickets raised by Use case team and provided solution.`,
   },
-  {
-    title: "Junior QA Tester",
-    company: "Software Systems Corp.",
-    location: "Seattle, WA",
-    period: "2016 - 2018",
-    description: "Conducted manual testing, documented bugs, and assisted in test automation implementation.",
-    detailedDescription: `• Executed manual test cases
-    • Documented and tracked bugs using JIRA
-    • Assisted in test automation implementation
-    • Performed smoke and sanity testing
-    • Participated in daily stand-ups
-    • Created test documentation
-    • Conducted cross-browser testing
-    • Learned and implemented basic automation
-    • Collaborated with team members
-    • Maintained test environments`,
-  },
-]
+];
 
 export default function Experience() {
-  const theme = useTheme()
-  const [selectedExp, setSelectedExp] = useState<(typeof experiences)[0] | null>(null)
+  const theme = useTheme();
+  const [selectedExp, setSelectedExp] = useState<
+    (typeof experiences)[0] | null
+  >(null);
 
   return (
     <Box
@@ -145,7 +137,9 @@ export default function Experience() {
                     </Typography>
                   </Box>
                   <Box sx={{ display: "flex", alignItems: "flex-start" }}>
-                    <Description sx={{ mr: 1, mt: 0.5, color: "text.secondary" }} />
+                    <Description
+                      sx={{ mr: 1, mt: 0.5, color: "text.secondary" }}
+                    />
                     <Typography variant="body2" color="text.secondary">
                       {experience.description}
                     </Typography>
@@ -156,7 +150,11 @@ export default function Experience() {
           ))}
         </Grid>
 
-        <Modal open={!!selectedExp} onClose={() => setSelectedExp(null)} aria-labelledby="experience-modal">
+        <Modal
+          open={!!selectedExp}
+          onClose={() => setSelectedExp(null)}
+          aria-labelledby="experience-modal"
+        >
           <Box
             sx={{
               position: "absolute",
@@ -174,11 +172,20 @@ export default function Experience() {
           >
             {selectedExp && (
               <>
-                <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    mb: 3,
+                  }}
+                >
                   <Typography variant="h4" component="h2">
                     {selectedExp.title}
                   </Typography>
-                  <IconButton onClick={() => setSelectedExp(null)} sx={{ color: "text.secondary" }}>
+                  <IconButton
+                    onClick={() => setSelectedExp(null)}
+                    sx={{ color: "text.secondary" }}
+                  >
                     <Close />
                   </IconButton>
                 </Box>
@@ -209,6 +216,5 @@ export default function Experience() {
         </Modal>
       </Container>
     </Box>
-  )
+  );
 }
-

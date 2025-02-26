@@ -89,11 +89,6 @@ const skills = [
     color: "#009688",
   },
   {
-    name: "Test Frameworks",
-    icon: Build,
-    color: "#ff5722",
-  },
-  {
     name: "Cross-platform Testing",
     icon: Devices,
     color: "#8bc34a",
